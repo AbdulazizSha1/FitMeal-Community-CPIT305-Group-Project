@@ -2,6 +2,7 @@ package org.example.db;
 
 public class Meal {
     private final String dishName;
+    private final String typeOfDish;
     private final String ingredients;
     private final String preparationSteps;
     private final int timeToPrepare;
@@ -9,8 +10,9 @@ public class Meal {
     private final double rating;
     private final String hasVedio;
 
-    public Meal(String dishName, String ingredients, String preparationSteps, int timeToPrepare, String uploadedBy, double rating, String hasVedio) {
+    public Meal(String dishName,String typeOfDish, String ingredients, String preparationSteps, int timeToPrepare, String uploadedBy, double rating, String hasVedio) {
         this.dishName = dishName;
+        this.typeOfDish = typeOfDish;
         this.ingredients = ingredients;
         this.preparationSteps = preparationSteps;
         this.timeToPrepare = timeToPrepare;
@@ -21,6 +23,10 @@ public class Meal {
 
     public String getDishName() {
         return dishName;
+    }
+
+    public String getTypeOfDish() {
+        return typeOfDish;
     }
 
     public String getIngredients() {
@@ -51,6 +57,7 @@ public class Meal {
     public String toString() {
         return "Meal{" +
                 "dishName='" + dishName + '\'' +
+                ", typeOfDish='" + typeOfDish + '\'' +
                 ", ingredients='" + ingredients + '\'' +
                 ", preparationSteps='" + preparationSteps + '\'' +
                 ", timeToPrepare=" + timeToPrepare +
