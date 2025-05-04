@@ -7,23 +7,23 @@ import java.util.concurrent.locks.ReentrantLock;
 
 public class Database {
 
-    private static String DB_USER ="postgres";
+    private static String DB_USER = "postgres";
 
-    private static String DB_PASSWORD= "postgres";
+    private static String DB_PASSWORD = "postgres";
 
     private static String TABLE_NAME = "fitmeal_community";
 
-    private static String DB_URL ="jdbc:postgresql://localhost:5432/" + TABLE_NAME;
+    private static String DB_URL = "jdbc:postgresql://localhost:5432/" + TABLE_NAME;
 
     private static final ReentrantLock lock = new ReentrantLock();
 
-    public static void initializeDatabase(){
-        try(Connection conn = getConnection();
-            Statement stmt = conn.createStatement()){
+    public static void initializeDatabase() {
+        try (Connection conn = getConnection();
+             Statement stmt = conn.createStatement()) {
 
-           // stmt.execute("DROP TABLE IF NOT EXISTS "+TABLE_NAME);
+            // stmt.execute("DROP TABLE IF NOT EXISTS "+TABLE_NAME);
 
-            String createTableSQL = "CREATE TABLE IF NOT EXISTS "+ TABLE_NAME + " (" +
+            String createTableSQL = "CREATE TABLE IF NOT EXISTS " + TABLE_NAME + " (" +
                     "id SERIAL PRIMARY KEY, " +
                     "dishName VARCHAR(255) NOT NULL," +
                     "typeOfDish VARCHAR(255) NOT NULL, " +
@@ -35,9 +35,8 @@ public class Database {
                     "hasVedio VARCHAR(255) NOT NULL) ";
             stmt.execute(createTableSQL);
             System.out.println("Database has been initialized");
-        }
-        catch (SQLException e){
-            System.err.println("Unable to initialize the database " +e.getMessage());
+        } catch (SQLException e) {
+            System.err.println("Unable to initialize the database " + e.getMessage());
             System.exit(2);
         }
 
@@ -52,40 +51,35 @@ public class Database {
     //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
     // Insert Operation:
-    public static void insertAllMeals(List<Meal> dishesList){
+    public static void insertAllMeals(List<Meal> dishesList) {
         lock.lock();
-        try(Connection conn = getConnection();
-            PreparedStatement pstmt = conn.prepareStatement(
-                    "INSERT INTO "+ TABLE_NAME + "(dishName, typeOfDish, ingredients, preparationSteps, timeToPrepare, uploadedBy, rating, hasVedio) VALUES (?, ?, ?, ?, ?, ?, ?, ?)")){
+        try (Connection conn = getConnection();
+             PreparedStatement pstmt = conn.prepareStatement(
+                     "INSERT INTO " + TABLE_NAME + "(dishName, typeOfDish, ingredients, preparationSteps, timeToPrepare, uploadedBy, rating, hasVedio) VALUES (?, ?, ?, ?, ?, ?, ?, ?)")) {
             conn.setAutoCommit(false);
-            for (Meal item :dishesList){
+            for (Meal item : dishesList) {
                 pstmt.setString(1, item.getDishName());
-                pstmt.setString(2,item.getTypeOfDish());
+                pstmt.setString(2, item.getTypeOfDish());
                 pstmt.setString(3, item.getIngredients());
                 pstmt.setString(4, item.getPreparationSteps());
-                pstmt.setInt(5,item.getTimeToPrepare());
+                pstmt.setInt(5, item.getTimeToPrepare());
                 pstmt.setString(6, item.getUploadedBy());
-                pstmt.setDouble(7,item.getRating());
+                pstmt.setDouble(7, item.getRating());
                 pstmt.setString(8, item.getHasVedio());
                 pstmt.addBatch();
             }
             pstmt.executeBatch();
             conn.commit();
-        }
-        catch (SQLException e){
+        } catch (SQLException e) {
             System.err.println("Failed to insert meal data");
-        }
-        finally{
+        } finally {
             lock.unlock();
         }
     }
 
 
-
-
-
     // Read Operation:
-     public static List<Meal> searchDish(String searchName) {
+    public static List<Meal> searchDish(String searchName) {
         List<Meal> results = new ArrayList<>();
         lock.lock();
         try (Connection conn = getConnection();
@@ -122,7 +116,7 @@ public class Database {
              PreparedStatement pstmt = conn.prepareStatement(
                      "UPDATE " + TABLE_NAME + " SET " +
                              "dishName = ?, " +
-                             "typeOfDish = ?, "+
+                             "typeOfDish = ?, " +
                              "ingredients = ?, " +
                              "preparationSteps = ?, " +
                              "timeToPrepare = ?, " +
@@ -168,11 +162,58 @@ public class Database {
             lock.unlock();
         }
     }
+    //====================================================================================================
+
+    public static boolean isMealTableEmpty() {
+        lock.lock();
+        try (Connection conn = getConnection();
+             Statement stmt = conn.createStatement();
+             ResultSet rs = stmt.executeQuery("SELECT COUNT(*) FROM " + TABLE_NAME)) {
+            if (rs.next()) {
+                return rs.getInt(1) == 0;
+            }
+        } catch (SQLException e) {
+            System.err.println("Failed to check if table is empty: " + e.getMessage());
+        } finally {
+            lock.unlock();
+        }
+        return false;
+    }
+    //====================================================================================================
+
+    public static List<Meal> getAllMeals() {
+        List<Meal> results = new ArrayList<>();
+        lock.lock();
+        try (Connection conn = getConnection();
+             PreparedStatement pstmt = conn.prepareStatement("SELECT * FROM " + TABLE_NAME);
+             ResultSet rs = pstmt.executeQuery()) {
+
+            while (rs.next()) {
+                Meal meal = new Meal(
+                        rs.getInt("id"),
+                        rs.getString("dishName"),
+                        rs.getString("typeOfDish"),
+                        rs.getString("ingredients"),
+                        rs.getString("preparationSteps"),
+                        rs.getInt("timeToPrepare"),
+                        rs.getString("uploadedBy"),
+                        rs.getDouble("rating"),
+                        rs.getString("hasVedio")
+                );
+                results.add(meal);
+            }
+        } catch (SQLException e) {
+            System.err.println("Failed to retrieve meals: " + e.getMessage());
+        } finally {
+            lock.unlock();
+        }
+        return results;
+    }
 
     //====================================================================================================
 
     public static Connection getConnection() throws SQLException {
-        return DriverManager.getConnection(DB_URL,DB_USER,DB_PASSWORD);
+        return DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
     }
 
 }

@@ -11,7 +11,7 @@ public class ChatClient {
     private static final String SERVER_ADDRESS = "localhost";
     private static final int SERVER_PORT = 6060;
 
-    private static final List<String> BAD_WORDS = Arrays.asList("stupid", "idiot", "dumb", "bad","hate","ugly");
+    private static final List<String> BAD_WORDS = Arrays.asList("stupid", "idiot", "dumb", "bad", "hate", "ugly");
 
     public static void main(String[] args) {
         try {

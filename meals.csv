@@ -1,0 +1,61 @@
+dishName,typeOfDish,ingredients,preparationSteps,timeToPrepare,uploadedBy,rating,hasVideo
+Turkey Sandwich,Lunch,Ribs؛ BBQ sauce,Simmer over low heat,39,Fahad,3.1,yes
+Pancakes,Breakfast,Peppers؛ rice؛ beef,Roast in oven,43,Reem,2.3,yes
+Smoothie,Lunch,Lettuce؛ croutons؛ cheese,Mix and chill,23,Raed,2.3,yes
+Fish Tacos,Dinner,Turkey؛ bread؛ lettuce,Mix and cook all ingredients,25,Salman,4.4,no
+Fish Tacos,Lunch,Fish؛ tortilla؛ cabbage,Blend؛ fry؛ and serve,28,Mashael,1.8,yes
+Caesar Salad,Dinner,Oats؛ milk؛ honey,Mix and cook all ingredients,39,Abdullah,4.0,no
+Caesar Salad,Lunch,Beef؛ potatoes؛ carrots,Mix and cook all ingredients,40,Nawaf,0.1,yes
+Baked Salmon,Breakfast,Eggs؛ butter؛ salt,Assemble and toast,37,Leila,2.8,no
+Avocado Toast,Breakfast,Eggs؛ butter؛ salt,Mix and chill,34,Khalid,2.5,yes
+Mushroom Risotto,Lunch,Tomato؛ cream؛ herbs,Roast in oven,22,Turki,4.9,no
+Fried Rice,Lunch,Pasta؛ meat؛ tomato sauce,Mix and cook all ingredients,35,Salman,0.3,yes
+Smoothie,Dinner,Avocado؛ bread؛ olive oil,Mix and chill,45,Nawaf,3.9,yes
+BBQ Ribs,Lunch,Oats؛ milk؛ honey,Mix and chill,25,Abdullah,0.9,yes
+Avocado Toast,Breakfast,Tomato؛ cream؛ herbs,Grill and garnish,40,Raed,3.3,yes
+Oatmeal,Breakfast,Chicken؛ curry powder؛ yogurt,Boil and stir,12,Abdullah,3.8,yes
+Fried Rice,Lunch,Chicken؛ curry powder؛ yogurt,Stir fry on high heat,16,Raed,0.2,no
+Pancakes,Breakfast,Quinoa؛ beans؛ corn,Roast in oven,33,Sara,0.6,no
+Oatmeal,Lunch,Quinoa؛ beans؛ corn,Stir fry on high heat,11,Khalid,3.2,yes
+Scrambled Eggs,Lunch,Tomato؛ cream؛ herbs,Boil and stir,36,Abdullah,1.2,yes
+Tomato Soup,Breakfast,Fish؛ tortilla؛ cabbage,Blend؛ fry؛ and serve,21,Khalid,4.7,no
+Spaghetti Bolognese,Dinner,Ribs؛ BBQ sauce,Roast in oven,12,Reem,3.4,no
+Beef Stew,Breakfast,Tomato؛ cream؛ herbs,Mix and chill,36,Raed,4.0,no
+Grilled Chicken,Lunch,Rice؛ vegetables؛ soy sauce,Boil and stir,25,Haifa,3.0,yes
+Scrambled Eggs,Breakfast,Ribs؛ BBQ sauce,Boil and stir,39,Abdullah,3.6,no
+BBQ Ribs,Dinner,Beef؛ potatoes؛ carrots,Assemble and toast,6,Abdullah,3.4,yes
+Tomato Soup,Breakfast,Peppers؛ rice؛ beef,Stir fry on high heat,8,Abdullah,3.0,no
+Mushroom Risotto,Breakfast,Rice؛ vegetables؛ soy sauce,Stir fry on high heat,8,Sara,3.4,no
+Stuffed Peppers,Dinner,Chicken؛ spices؛ oil,Stir fry on high heat,30,Reem,3.2,yes
+Veggie Stir Fry,Lunch,Lettuce؛ croutons؛ cheese,Mix and cook all ingredients,10,Nawaf,1.6,yes
+Pancakes,Lunch,Pasta؛ meat؛ tomato sauce,Stir fry on high heat,16,Haifa,2.5,yes
+Fried Rice,Lunch,Chicken؛ spices؛ oil,Stir fry on high heat,42,Raed,2.7,yes
+Quinoa Bowl,Breakfast,Avocado؛ bread؛ olive oil,Assemble and toast,22,Abdullah,0.1,yes
+Mushroom Risotto,Dinner,Avocado؛ bread؛ olive oil,Stir fry on high heat,15,Haifa,1.1,no
+Caesar Salad,Breakfast,Tomato؛ cream؛ herbs,Stir fry on high heat,30,Ahmed,1.5,no
+Turkey Sandwich,Breakfast,Turkey؛ bread؛ lettuce,Boil and stir,15,Abdullah,2.1,yes
+Fried Rice,Dinner,Turkey؛ bread؛ lettuce,Bake for 30 minutes,26,Nawaf,4.4,yes
+Fish Tacos,Breakfast,Oats؛ milk؛ honey,Blend؛ fry؛ and serve,14,Reem,2.6,no
+Tomato Soup,Breakfast,Beef؛ potatoes؛ carrots,Mix and chill,44,Reem,4.8,yes
+Caesar Salad,Lunch,Vegetables؛ soy sauce,Boil and stir,32,Mashael,0.6,no
+Quinoa Bowl,Lunch,Beef؛ potatoes؛ carrots,Mix and chill,45,Nora,4.9,no
+Fish Tacos,Lunch,Avocado؛ bread؛ olive oil,Mix and chill,44,Sara,3.5,yes
+Fish Tacos,Lunch,Fish؛ tortilla؛ cabbage,Mix and cook all ingredients,33,Nora,1.8,yes
+Smoothie,Lunch,Oats؛ milk؛ honey,Simmer over low heat,16,Leila,3.1,yes
+Smoothie,Dinner,Pasta؛ meat؛ tomato sauce,Bake for 30 minutes,29,Reem,3.1,yes
+Caesar Salad,Lunch,Peppers؛ rice؛ beef,Boil and stir,23,Raed,4.7,yes
+Grilled Chicken,Breakfast,Mushroom؛ rice؛ parmesan,Simmer over low heat,12,Reem,1.6,no
+Smoothie,Dinner,Chicken؛ spices؛ oil,Boil and stir,34,Abdullah,3.1,yes
+Scrambled Eggs,Lunch,Fish؛ tortilla؛ cabbage,Mix and chill,23,Mashael,2.6,yes
+Fried Rice,Breakfast,Vegetables؛ soy sauce,Grill and garnish,15,Haifa,0.9,yes
+Veggie Stir Fry,Lunch,Vegetables؛ soy sauce,Grill and garnish,32,Mashael,2.2,no
+Scrambled Eggs,Dinner,Lettuce؛ croutons؛ cheese,Roast in oven,37,Abdullah,4.9,yes
+Chicken Curry,Dinner,Peppers؛ rice؛ beef,Boil and stir,32,Raed,4.5,yes
+Baked Salmon,Breakfast,Rice؛ vegetables؛ soy sauce,Assemble and toast,44,Sara,0.7,yes
+Scrambled Eggs,Lunch,Beef؛ potatoes؛ carrots,Stir fry on high heat,12,Abdullah,2.9,yes
+Turkey Sandwich,Breakfast,Chicken؛ spices؛ oil,Mix and chill,17,Haifa,1.3,yes
+Grilled Chicken,Breakfast,Flour؛ eggs؛ milk,Mix and chill,39,Nawaf,1.6,no
+Oatmeal,Dinner,Oats؛ milk؛ honey,Boil and stir,13,Ahmed,4.9,no
+Spaghetti Bolognese,Lunch,Tomato؛ cream؛ herbs,Stir fry on high heat,26,Ahmed,4.2,yes
+Beef Stew,Lunch,Mushroom؛ rice؛ parmesan,Boil and stir,42,Salman,4.8,no
+Caesar Salad,Dinner,Beef؛ potatoes؛ carrots,Assemble and toast,25,Abdullah,4.5,no

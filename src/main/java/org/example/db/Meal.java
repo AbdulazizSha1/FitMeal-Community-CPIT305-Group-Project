@@ -1,16 +1,18 @@
 package org.example.db;
 
 public class Meal {
+    private int id;
     private final String dishName;
     private final String typeOfDish;
     private final String ingredients;
     private final String preparationSteps;
     private final int timeToPrepare;
     private final String uploadedBy;
-    private final double rating;
+    private double rating;
     private final String hasVedio;
+    private boolean isFavorite;
 
-    public Meal(String dishName,String typeOfDish, String ingredients, String preparationSteps, int timeToPrepare, String uploadedBy, double rating, String hasVedio) {
+    public Meal(String dishName, String typeOfDish, String ingredients, String preparationSteps, int timeToPrepare, String uploadedBy, double rating, String hasVedio) {
         this.dishName = dishName;
         this.typeOfDish = typeOfDish;
         this.ingredients = ingredients;
@@ -19,6 +21,23 @@ public class Meal {
         this.uploadedBy = uploadedBy;
         this.rating = rating;
         this.hasVedio = hasVedio;
+        this.isFavorite = false;
+    }
+
+    public Meal(int id, String dishName, String typeOfDish, String ingredients, String preparationSteps, int timeToPrepare, String uploadedBy, double rating, String hasVedio) {
+        this.id = id;
+        this.dishName = dishName;
+        this.typeOfDish = typeOfDish;
+        this.ingredients = ingredients;
+        this.preparationSteps = preparationSteps;
+        this.timeToPrepare = timeToPrepare;
+        this.uploadedBy = uploadedBy;
+        this.rating = rating;
+        this.hasVedio = hasVedio;
+    }
+
+    public int getId() {
+        return id;
     }
 
     public String getDishName() {
