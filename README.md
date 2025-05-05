@@ -6,3 +6,20 @@ This app aims to simplify preparing your favorite meals and discovering new dish
 - An Interactive Community
 - Saving Time
 - Offline Access To Recepies
+
+## Contributors
+This project was created by CPIT-305 Group:
+- Abdulaziz Shaheen
+- Ahmed Alluqmani
+- Ayman Turkistani
+
+## Concepts Applied
+- Java Exceptions
+- I/O Operations
+- Multi-Threading
+- Netwroking
+- JDBC
+
+
+
+
