@@ -31,9 +31,9 @@ This project was created by CPIT-305 Group:
 1. Clone the Repository
 2. Start the PostgreSQL database and pgAdmin using Docker Compose:
 
-bash
+```bash
 docker-compose up
-
+```
 3. Run the main app App.java.
   - This will start the database server and pgAdmin.
   - It will also create the database and table. 
