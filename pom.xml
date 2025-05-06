@@ -26,5 +26,13 @@
       <artifactId>postgresql</artifactId>
       <version>42.7.5</version>
     </dependency>
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter</artifactId>
+      <version>5.10.0</version>
+      <scope>test</scope>
+    </dependency>
+
   </dependencies>
+
 </project>
