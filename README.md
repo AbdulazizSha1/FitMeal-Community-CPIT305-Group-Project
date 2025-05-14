@@ -47,21 +47,23 @@ docker-compose up
 
       ![](images/pic3.png)
 
-6. ⁠When choose 1, display all dishes in DB:
+5. ⁠When choose 1, display all dishes in DB:
 
       ![](images/pic4.png)
 
-8. ⁠When choose 2, you will be able to add dish in DB. Here is the table after insert new dish:
+6. ⁠When choose 2, you will be able to add dish in DB. Here is the table after insert new dish:
 
       ![](images/pic5.png)
 
-10. ⁠When choose 3, list of favorite meal will displayed.
+7. ⁠When choose 3, list of favorite meal will displayed.
 
-11. Before choose 4, be sure the server is active:
+8. Before choose 4, be sure the server is active:
 
       ![](images/pic6.png)
 
-13. Choose 4, and then many clients will be able to join and chat with each other. Note: The chat feature includes a filter that replaces inappropriate words with ****.
+9. Choose 4, and then many clients will be able to join and chat with each other. Note: The chat feature includes a filter that replaces inappropriate words with ****.
 
       ![](images/pic7.png)
-   
+
+## AI Usage Disclosure
+Gen AI, specifically ChatGPT, was used to assist in establishing unit testing.
